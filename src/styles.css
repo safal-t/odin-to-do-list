@@ -34,15 +34,18 @@ div {
 
 .list-options-container {
     background-color: hsl(218, 87%, 82%);
-    display: flex;
-    padding: 5%;
-    border-radius: 10%;
+    padding: 1%;
+    border-radius: 10px;
 }
 
 .list-container {
     background-color: hsl(218, 87%, 82%);
-    display: flex;
-    padding: 10%;
-    border-radius: 10%;
+    padding: 5%;
+    border-radius: 50px;
+
+}
+
+input {
+    margin: 10px;
 }
 
