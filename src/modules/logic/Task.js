@@ -1,19 +1,19 @@
-export class Task {
+class Task {
     constructor(name, list, description, dueDate, priority) {
         this.name = name;
-        this.list = list || "defaultList"
+        this.list = list || "defaultList";
         this.description = description || '';
         this.dueDate = dueDate || null;
         this.priority = priority || 'Low';
-        this.completed = false;
+        this.completedStatus = false; 
     }
 
     returnList() {
-        return this.list
+        return this.list;
     }
 
-    completed() {
-        this.completed = false;
+    markCompleted() { 
+        this.completedStatus = true;
     }
 
     toString() {
@@ -21,12 +21,14 @@ export class Task {
     }
 
     returnDetails() {
-        return `Task: ${this.name}, List: ${this.list}, Description: ${this.description}, Due Date: ${this.dueDate || 'No due date'}, Priority: ${this.priority}, Completed: ${this.completed}`;
+        return `Task: ${this.name}, List: ${this.list}, Description: ${this.description}, Due Date: ${this.dueDate || 'No due date'}, Priority: ${this.priority}, Completed: ${this.completedStatus}`;
     }
 }
 
-export const createTask = function (name, list, description, dueDate, priority) {
+function createTask(name, list, description, dueDate, priority) {
     const newTask = new Task(name, list, description, dueDate, priority);
-    list.addTask(newTask);
+    list.addTask(newTask); 
     return newTask;
 }
+
+export default createTask;

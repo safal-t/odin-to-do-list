@@ -1,4 +1,4 @@
-export default class TaskList {
+class TaskList {
     constructor() {
         this.tasks = [];
     }
@@ -11,8 +11,10 @@ export default class TaskList {
         const index = this.getTaskIndex(task);
         if (index !== -1) {
             this.tasks.splice(index, 1);
+            return true; // Indicate successful removal
         } else {
-            console.error('Task not found in the list.');
+            console.warn('Task not found in the list.');
+            return false; // Indicate failure
         }
     }
 
@@ -28,3 +30,5 @@ export default class TaskList {
         return this.getTaskIndex(task) !== -1;
     }
 }
+
+export default TaskList;
