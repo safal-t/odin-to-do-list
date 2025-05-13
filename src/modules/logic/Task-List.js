@@ -1,5 +1,8 @@
+import listManager from './List-Manager';
+
 class TaskList {
-    constructor() {
+    constructor(name) {
+        this.listName = name;
         this.tasks = [];
     }
 
@@ -31,4 +34,10 @@ class TaskList {
     }
 }
 
-export default TaskList;
+const createList = name => {
+    const list = new TaskList (name);
+    listManager.addList(list);
+    return list
+}
+
+export default createList;
