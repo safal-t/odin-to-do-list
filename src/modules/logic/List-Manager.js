@@ -10,10 +10,10 @@ const listManager = (() => {
     }
 
     const findListIndex = (list) => {
-        const index = allLists.indexOf(list); // Fixed: Removed `this`
+        const index = allLists.indexOf(list); 
         if (index === -1) {
             console.error("list does not exist");
-            return -1; // Explicitly return -1 for invalid cases
+            return -1; 
         }
         return index;
     };
@@ -36,8 +36,10 @@ const listManager = (() => {
         removeList,
         findListIndex,
         returnList,
-        returnAllLists,
-    };
+        get lists() {
+            return returnAllLists();
+        }
+    }
 })();
 
 export default listManager;
