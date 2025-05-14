@@ -8,7 +8,6 @@ import "./modules/dom/new-list-btn.js"
 
 
 const defaultList = createList("defaultList");
-const testList = createList("testList");
 
 
 createTask('First Task', defaultList, 'this is an auto-generated task', '00/00/00', 'medium');
@@ -17,6 +16,5 @@ createTask('Third Task', defaultList, 'yet another auto-generated task', '02/02/
 createTask('Fourth Task', defaultList, 'final auto-generated task', '03/03/03', 'medium');
 
 displayList(defaultList);
-displayList(testList); 
 
 displayOptions(); 
