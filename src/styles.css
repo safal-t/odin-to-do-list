@@ -1,3 +1,9 @@
+:root {
+    --primary-bg-color: hsl(0, 0%, 0%);
+    --primary-text-color: hsl(218, 77%, 64%);
+    --secondary-bg-color: hsl(218, 87%, 82%);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +17,7 @@ html , body{
 body {
     text-align: center;
     padding: 2%;
-    background-color: hsl(0, 0%, 0%);
+    background-color: var(--primary-bg-color);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: hsl(218, 77%, 64%);
 }
@@ -30,22 +36,40 @@ div {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    width: 100%; 
 }
 
 .list-options-container {
-    background-color: hsl(218, 87%, 82%);
-    padding: 1%;
+    background-color: var(--secondary-bg-color);
+    padding: 10px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
 }
 
 .list-container {
-    background-color: hsl(218, 87%, 82%);
+    background-color: var(--secondary-bg-color);
     padding: 5%;
     border-radius: 50px;
-
 }
 
 input {
     margin: 10px;
+}
+
+.create-list-btn {
+    padding: 1%;
+    border-radius: 10px;
+    background-color: var(--primary-text-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.list-option-container {
+    padding: 10px;
+    width: 80px;
 }
 
