@@ -4,6 +4,7 @@ import createList from './modules/logic/Task-List.js';
 import displayList from './modules/dom/display-list.js';
 import listManager from './modules/logic/List-Manager.js';
 import displayOptions from './modules/dom/display-options.js';
+import "./modules/dom/new-list-btn.js"
 
 
 const defaultList = createList("defaultList");
@@ -18,4 +19,4 @@ createTask('Fourth Task', defaultList, 'final auto-generated task', '03/03/03', 
 displayList(defaultList);
 displayList(testList); 
 
-displayOptions(listManager, document.querySelector('.list-options-container')); 
+displayOptions(); 
