@@ -1,5 +1,6 @@
 const displayList = list => {
     const container = document.querySelector(".list-container")
+    container.innerHTML = "";
     list.tasks.forEach(element => {
         const itemContainer = document.createElement("div");
         const item = document.createElement("input");

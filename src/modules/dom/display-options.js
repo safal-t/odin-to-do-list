@@ -1,4 +1,5 @@
 import listManager from "../logic/List-Manager";
+import displayList from "./display-list";
 
 const CONTAINER = document.querySelector('.list-options-container');
 
@@ -16,6 +17,9 @@ const displayOptions = () => {
         div.className = "list-option-container";
         div.innerText = element.listName;
         div.setAttribute("data-list-name", element.listName);
+        div.addEventListener("click", () => {
+            displayList(element);
+        })
         CONTAINER.append(div); 
     });
 }
