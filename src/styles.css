@@ -59,7 +59,8 @@ input {
     margin: 10px;
 }
 
-.create-list-btn {
+.create-list-btn,
+.create-task-btn {
     padding: 1%;
     border-radius: 10px;
     background-color: var(--primary-text-color);
@@ -71,5 +72,10 @@ input {
 .list-option-container {
     padding: 10px;
     width: 100px;
+}
+
+.btn-container {
+    width: 100%;
+    height: 100%;
 }
 
