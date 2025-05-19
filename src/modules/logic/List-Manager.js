@@ -1,12 +1,16 @@
+import displayOptions from "../dom/display-options";
+
 const listManager = (() => {
     const allLists = [];
 
     const addList = (list) => {
         allLists.push(list);
+        displayOptions()
     };
 
     const removeList = list => {
         allLists.splice(findListIndex(list), 1)
+        displayOptions()
     }
 
     const findListIndex = (list) => {

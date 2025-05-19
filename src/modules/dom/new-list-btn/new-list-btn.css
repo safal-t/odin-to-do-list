@@ -1,0 +1,21 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color:white;
+    background-color: var(--primary-text-color);
+    padding: 1%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: 25%;
+}
+
+.modal button {
+    background-color: var(--primary-text-color);
+    padding: 2%;
+    border-radius: 10px;
+}
+
