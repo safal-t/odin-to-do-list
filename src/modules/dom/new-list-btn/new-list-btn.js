@@ -7,7 +7,7 @@ const BUTTON = document.querySelector(".create-list-btn");
 const modal = document.createElement("div");
 const form = document.createElement("form"); 
 
-modal.classList.add("modal")
+modal.classList.add("modal", "list-modal");
 modal.style.display = "none"; 
 form.classList.add("new-list-form");
 form.innerHTML = `
@@ -29,16 +29,19 @@ form.addEventListener("submit", event => {
     createList(name);
     modal.style.display = "none";
     document.querySelector(".list-container").style.display = "block";
+    document.querySelector(".btn-container").style.display = "block";
     form.reset();
 })
 
 BUTTON.addEventListener('click', () => {
     modal.style.display = "block";
     document.querySelector(".list-container").style.display = "none";
+    document.querySelector(".btn-container").style.display = "none";
 })
 
 form.querySelector('.close-modal-btn').addEventListener('click', () => {
     modal.style.display = "none";
     document.querySelector(".list-container").style.display = "block";
+    document.querySelector(".btn-container").style.display = "block";
     form.reset();
 });
