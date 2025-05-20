@@ -1,5 +1,5 @@
 import listManager from "../logic/List-Manager";
-import displayList from "./display-list";
+import displayList from "./display-list/display-list";
 
 const CONTAINER = document.querySelector('.list-options-container');
 

@@ -1,7 +1,7 @@
 import "./new-task.css"
 import createTask from "../../logic/Task";
 import listManager from "../../logic/List-Manager";
-import displayList from "../display-list";
+import displayList from "../display-list/display-list";
 
 const BUTTON = document.querySelector(".create-task-btn");
 const modal = document.createElement("div");

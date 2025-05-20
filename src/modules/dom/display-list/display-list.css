@@ -1,0 +1,33 @@
+.item-container {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.item-heading {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.item-description {
+  font-size: 0.95em;
+  color: #555;
+}
+
+.delete-button {
+    padding: 1%;
+    border-radius: 10px;
+    background-color: var(--primary-text-color);
+    color: white;
+    font-weight: bold;
+}

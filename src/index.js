@@ -1,7 +1,7 @@
 import './styles.css';
 import createTask from './modules/logic/Task.js';
 import createList from './modules/logic/Task-List.js';
-import displayList from './modules/dom/display-list.js';
+import displayList from './modules/dom/display-list/display-list.js';
 import listManager from './modules/logic/List-Manager.js';
 import displayOptions from './modules/dom/display-options.js';
 import "./modules/dom/new-list-btn/new-list-btn.js";
