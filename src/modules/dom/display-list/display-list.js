@@ -18,6 +18,17 @@ const displayList = list => {
         description.textContent = element.description;
         description.className = "item-description";
 
+        // Details div (initially hidden)
+        const details = document.createElement("div");
+        details.className = "item-details";
+        details.style.display = "none"; // Hidden by default
+        details.textContent = `Date: ${element.dueDate || "N/A"}`;
+
+        // Toggle details on textContainer click
+        textContainer.addEventListener("click", () => {
+            details.style.display = details.style.display === "none" ? "block" : "none";
+        });
+
         // Set priority background color
         if (element.priority === "low") {
             itemContainer.style.backgroundColor = "green";
@@ -42,8 +53,9 @@ const displayList = list => {
             }
         });
 
-        // Arrange text and button side by side
+        // Arrange text, details, and button
         itemContainer.append(textContainer, deleteButton);
+        itemContainer.append(details);
         container.append(itemContainer);
     });
 }
