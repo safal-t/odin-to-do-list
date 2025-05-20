@@ -1,6 +1,7 @@
 import "./new-task.css"
 import createTask from "../../logic/Task";
 import listManager from "../../logic/List-Manager";
+import displayList from "../display-list";
 
 const BUTTON = document.querySelector(".create-task-btn");
 const modal = document.createElement("div");
@@ -75,6 +76,7 @@ form.addEventListener("submit", event => {
     modal.style.display = "none";
     document.querySelector(".list-container").style.display = "block";
     document.querySelector(".btn-container").style.display = "block";
+    displayList(listObj);
     form.reset();
 });
 
